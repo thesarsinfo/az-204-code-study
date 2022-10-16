@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "_2_2_Function": {
+      "commandName": "Project",
+      "commandLineArgs": "--port 7028",
+      "launchBrowser": false
+    }
+  }
+}

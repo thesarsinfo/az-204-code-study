@@ -1,0 +1,96 @@
+{
+    "location": "East US 2",
+    "tags": {},
+    "properties": {
+        "name": "plan-az204-test-eastus2-0001-autoscale-date",
+        "enabled": true,
+        "targetResourceUri": "/subscriptions/25b81464-adcf-4e48-ab0b-2d11a35e355d/resourceGroups/meuteste/providers/Microsoft.Web/serverfarms/plan-az204-test-eastus2-0001",
+        "profiles": [
+            {
+                "name": "date",
+                "capacity": {
+                    "minimum": "10",
+                    "maximum": "10",
+                    "default": "10"
+                },
+                "rules": [],
+                "fixedDate": {
+                    "timeZone": "Greenland Standard Time",
+                    "start": "2022-11-24T22:00:00.000Z",
+                    "end": "2022-11-29T06:59:00.000Z"
+                }
+            },
+            {
+                "name": "cpu",
+                "capacity": {
+                    "minimum": "1",
+                    "maximum": "10",
+                    "default": "1"
+                },
+                "rules": [
+                    {
+                        "scaleAction": {
+                            "direction": "Increase",
+                            "type": "ChangeCount",
+                            "value": "1",
+                            "cooldown": "PT5M"
+                        },
+                        "metricTrigger": {
+                            "metricName": "CpuPercentage",
+                            "metricNamespace": "microsoft.web/serverfarms",
+                            "metricResourceUri": "/subscriptions/25b81464-adcf-4e48-ab0b-2d11a35e355d/resourceGroups/meuteste/providers/Microsoft.Web/serverFarms/plan-az204-test-eastus2-0001",
+                            "operator": "GreaterThan",
+                            "statistic": "Average",
+                            "threshold": 90,
+                            "timeAggregation": "Average",
+                            "timeGrain": "PT1M",
+                            "timeWindow": "PT10M",
+                            "Dimensions": [],
+                            "dividePerInstance": false
+                        }
+                    },
+                    {
+                        "scaleAction": {
+                            "direction": "Decrease",
+                            "type": "ChangeCount",
+                            "value": "1",
+                            "cooldown": "PT5M"
+                        },
+                        "metricTrigger": {
+                            "metricName": "CpuPercentage",
+                            "metricNamespace": "microsoft.web/serverfarms",
+                            "metricResourceUri": "/subscriptions/25b81464-adcf-4e48-ab0b-2d11a35e355d/resourceGroups/meuteste/providers/Microsoft.Web/serverFarms/plan-az204-test-eastus2-0001",
+                            "operator": "LessThanOrEqual",
+                            "statistic": "Average",
+                            "threshold": 40,
+                            "timeAggregation": "Average",
+                            "timeGrain": "PT1M",
+                            "timeWindow": "PT10M",
+                            "Dimensions": [],
+                            "dividePerInstance": false
+                        }
+                    }
+                ],
+                "fixedDate": {
+                    "timeZone": "UTC",
+                    "start": "2022-10-10T00:00:00.000Z",
+                    "end": "2022-10-24T23:59:00.000Z"
+                }
+            },
+            {
+                "name": "padrao",
+                "capacity": {
+                    "minimum": "1",
+                    "maximum": "1",
+                    "default": "1"
+                },
+                "rules": []
+            }
+        ],
+        "notifications": [],
+        "targetResourceLocation": "East US 2"
+    },
+    "id": "/subscriptions/25b81464-adcf-4e48-ab0b-2d11a35e355d/resourceGroups/meuteste/providers/microsoft.insights/autoscalesettings/plan-az204-test-eastus2-0001-autoscale-date",
+    "name": "plan-az204-test-eastus2-0001-autoscale-date",
+    "type": "Microsoft.Insights/autoscaleSettings"
+}
