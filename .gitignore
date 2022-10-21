@@ -1,0 +1,5 @@
+# terraform binaries
+.terraform/
+*.hcl
+*.tfstate
+*.tfstate.backup
