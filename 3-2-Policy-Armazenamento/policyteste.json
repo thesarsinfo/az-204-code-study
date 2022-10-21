@@ -1,0 +1,26 @@
+{
+    "rules": [        
+        { 
+            "name":"primeirapolicy",
+            "enabled": true,
+            "type": "Lyfecycle",
+            "definition": {
+                "filter": {
+                    "blobTypes": [ "blobBlock"],
+                    "prefixmatch": [ "primeirocontainer/foo"]
+
+                },
+                "actions": {
+                    "baseBlob": {
+                        "tierToCool":{ "daysAfterModificationGreaterThan":33},
+                        "tierToArchive": { "daysAfterModificationGreaterThan": 180},
+                        "delete": { "daysAfterModificationGreaterThan": 2555}
+                    },
+                    "snapshot":{
+                        "delete": { "daysAfterModificationGreaterThan":90}
+                    }
+                }
+            }
+        }
+    ]
+}
