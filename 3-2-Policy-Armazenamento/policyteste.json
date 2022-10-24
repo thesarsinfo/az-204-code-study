@@ -1,26 +1,32 @@
 {
-    "rules": [        
-        { 
-            "name":"primeirapolicy",
-            "enabled": true,
-            "type": "Lyfecycle",
-            "definition": {
-                "filter": {
-                    "blobTypes": [ "blobBlock"],
-                    "prefixmatch": [ "primeirocontainer/foo"]
-
+    "rules": [
+        {
+          "name": "rulegabiarra",
+          "enabled":true,
+          "type": "Lifecycle",
+          "definition": {
+            "actions": {
+              "baseBlob":{
+                "tierToCool":{
+                  "daysAfterLastAccessTimeGreaterThan":30
                 },
-                "actions": {
-                    "baseBlob": {
-                        "tierToCool":{ "daysAfterModificationGreaterThan":33},
-                        "tierToArchive": { "daysAfterModificationGreaterThan": 180},
-                        "delete": { "daysAfterModificationGreaterThan": 2555}
-                    },
-                    "snapshot":{
-                        "delete": { "daysAfterModificationGreaterThan":90}
-                    }
+                "tierToArchive":{
+                  "daysAfterLastAccessTimeGreaterThan":90
+                },
+                "delete":{
+                  "daysAfterLastAccessTimeGreaterThan":1085
+                }                               
+              },
+              "snapshot":{
+                "delete":{
+                  "daysAfterCreationGreaterThan": 90
                 }
-            }
-        }
-    ]
+              }
+            },           
+            "filters":{
+              "blobTypes": ["blockBlob"]              
+            }  
+          }          
+        }         
+      ]
 }

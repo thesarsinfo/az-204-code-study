@@ -1,0 +1,26 @@
+{
+  "version": 2,
+  "dgSpecHash": "/ShwtW8gOZOaO7c1YBqwbr7Wj+mzzt4QoMYAmUl+wE7bxgMbBJ0cfeUb6kJMgK00y3u0v3LefNEvziqP0VTNkA==",
+  "success": true,
+  "projectFilePath": "c:\\Users\\USER\\OneDrive\\Documents\\Estudos Programacao\\Azure\\Certificação Azure\\az-204-codes-project\\3-3-Blob-dotnet\\connectStorageAccount\\connectStorageAccount.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\USER\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
+    "C:\\Users\\USER\\.nuget\\packages\\azure.storage.blobs\\12.14.1\\azure.storage.blobs.12.14.1.nupkg.sha512",
+    "C:\\Users\\USER\\.nuget\\packages\\azure.storage.common\\12.13.0\\azure.storage.common.12.13.0.nupkg.sha512",
+    "C:\\Users\\USER\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
+    "C:\\Users\\USER\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "C:\\Users\\USER\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\USER\\.nuget\\packages\\swashbuckle.aspnetcore\\6.2.3\\swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
+    "C:\\Users\\USER\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.2.3\\swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
+    "C:\\Users\\USER\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.2.3\\swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
+    "C:\\Users\\USER\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.2.3\\swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512",
+    "C:\\Users\\USER\\.nuget\\packages\\system.diagnostics.diagnosticsource\\4.6.0\\system.diagnostics.diagnosticsource.4.6.0.nupkg.sha512",
+    "C:\\Users\\USER\\.nuget\\packages\\system.io.hashing\\6.0.0\\system.io.hashing.6.0.0.nupkg.sha512",
+    "C:\\Users\\USER\\.nuget\\packages\\system.memory.data\\1.0.2\\system.memory.data.1.0.2.nupkg.sha512",
+    "C:\\Users\\USER\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\USER\\.nuget\\packages\\system.text.encodings.web\\4.7.2\\system.text.encodings.web.4.7.2.nupkg.sha512",
+    "C:\\Users\\USER\\.nuget\\packages\\system.text.json\\4.7.2\\system.text.json.4.7.2.nupkg.sha512",
+    "C:\\Users\\USER\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512"
+  ],
+  "logs": []
+}
