@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\USER\\OneDrive\\Documents\\Estudos Programacao\\Azure\\Certificação Azure\\az-204-codes-project\\3-3-Blob-dotnet\\connectStorageAccount\\connectStorageAccount.csproj": {}
+    "c:\\Users\\TESV\\Documents\\Certificações\\Az-204\\az-204-code-study\\3-3-Blob-dotnet\\connectStorageAccount\\connectStorageAccount.csproj": {}
   },
   "projects": {
-    "c:\\Users\\USER\\OneDrive\\Documents\\Estudos Programacao\\Azure\\Certificação Azure\\az-204-codes-project\\3-3-Blob-dotnet\\connectStorageAccount\\connectStorageAccount.csproj": {
+    "c:\\Users\\TESV\\Documents\\Certificações\\Az-204\\az-204-code-study\\3-3-Blob-dotnet\\connectStorageAccount\\connectStorageAccount.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\USER\\OneDrive\\Documents\\Estudos Programacao\\Azure\\Certificação Azure\\az-204-codes-project\\3-3-Blob-dotnet\\connectStorageAccount\\connectStorageAccount.csproj",
+        "projectUniqueName": "c:\\Users\\TESV\\Documents\\Certificações\\Az-204\\az-204-code-study\\3-3-Blob-dotnet\\connectStorageAccount\\connectStorageAccount.csproj",
         "projectName": "connectStorageAccount",
-        "projectPath": "c:\\Users\\USER\\OneDrive\\Documents\\Estudos Programacao\\Azure\\Certificação Azure\\az-204-codes-project\\3-3-Blob-dotnet\\connectStorageAccount\\connectStorageAccount.csproj",
-        "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\USER\\OneDrive\\Documents\\Estudos Programacao\\Azure\\Certificação Azure\\az-204-codes-project\\3-3-Blob-dotnet\\connectStorageAccount\\obj\\",
+        "projectPath": "c:\\Users\\TESV\\Documents\\Certificações\\Az-204\\az-204-code-study\\3-3-Blob-dotnet\\connectStorageAccount\\connectStorageAccount.csproj",
+        "packagesPath": "C:\\Users\\TESV\\.nuget\\packages\\",
+        "outputPath": "c:\\Users\\TESV\\Documents\\Certificações\\Az-204\\az-204-code-study\\3-3-Blob-dotnet\\connectStorageAccount\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\USER\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\TESV\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -53,7 +53,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -65,7 +66,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.305\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }
