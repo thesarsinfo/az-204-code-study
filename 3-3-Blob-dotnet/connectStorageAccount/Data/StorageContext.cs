@@ -14,9 +14,9 @@ namespace connectStorageAccount.data
         {
             return GetBlobInstance();
         }
-        public  BlobServiceClient GetBlobInstance()
+        public BlobServiceClient GetBlobInstance()
         {
-            string storageConnection = "azurestring";
+            string storageConnection = "somente String connection e não use chaves";
             BlobServiceClient blobServiceClient = new (storageConnection);
             return blobServiceClient;
         }

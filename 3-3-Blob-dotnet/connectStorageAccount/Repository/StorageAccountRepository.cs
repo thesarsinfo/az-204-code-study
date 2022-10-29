@@ -8,9 +8,9 @@ using connectStorageAccount.Controllers;
 using connectStorageAccount.data;
 using Microsoft.Extensions.Azure;
 
-namespace connectStorageAccount.Repository.ConcreteRepository
+namespace connectStorageAccount.Repository
 {
-    public class StorageAccountRepository : IStorageAccount
+    public class StorageAccountRepository : StorageContext, IStorageAccount
     {
         private readonly StorageContext _storageContext;
 
@@ -18,7 +18,8 @@ namespace connectStorageAccount.Repository.ConcreteRepository
         {
             _storageContext = storageContext;
         }
-        public async Task Connect()
+
+        public  async Task Connect()
         {
             _storageContext.GetBlobConnection().GetAwaiter().GetResult();            
         }
