@@ -9,10 +9,11 @@ using connectStorageAccount.data;
 namespace connectStorageAccount.Repository.ConcreteRepository
 {
 
-    
-    public class Repository : StorageAccountRepository, IRepository, IStorageAccount
+
+    public class Repository : StorageAccountRepository, IRepository
     {
-        
-        
+        public Repository(StorageContext storageContext) : base(storageContext)
+        {
+        }
     }
 }

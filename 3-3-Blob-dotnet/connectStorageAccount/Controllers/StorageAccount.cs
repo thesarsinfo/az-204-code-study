@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Azure.Storage.Blobs;
 using connectStorageAccount.Repository;
 using Microsoft.AspNetCore.Mvc;
 
@@ -11,21 +12,20 @@ namespace connectStorageAccount.Controllers
     [Route("api/v1/[controller]")]
     public class StorageAccount : ControllerBase
     {
-        private readonly IRepository _repository;
-        private readonly IStorageAccount _storage;
+        private readonly IRepository _repository;       
 
-        public StorageAccount(IRepository repository, IStorageAccount storage)
+        public StorageAccount(IRepository repository)
         {
             _repository = repository;
-            _storage = storage;
         }
-        [HttpPut("{id}")]        
-        public async IActionResult CreateContainer()
+
+        [HttpPut]        
+        public async Task<IActionResult> CreateContainer()
         {
             string containerName = "novocontainer" + Guid.NewGuid().ToString();
-            await _repository.Create(containerName);
-            
-            return Created("containerName",containerName);
+            BlobContainerClient teste = await _repository.Create(containerName); 
+            string nameContainer = teste.Name;           
+            return Created("containerName",nameContainer);
         }
 
     }

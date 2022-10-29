@@ -10,11 +10,16 @@ namespace connectStorageAccount.data
 {
     public class StorageContext
     {
+        public async Task<BlobServiceClient> GetBlobConnection()
+        {
+            return GetBlobInstance();
+        }
         public  BlobServiceClient GetBlobInstance()
         {
             string storageConnection = "azurestring";
             BlobServiceClient blobServiceClient = new (storageConnection);
             return blobServiceClient;
         }
+        
     }
 }
