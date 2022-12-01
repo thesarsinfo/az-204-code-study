@@ -12,18 +12,19 @@ namespace connectStorageAccount.Controllers
     [Route("api/v1/[controller]")]
     public class StorageAccount : ControllerBase
     {
-        private readonly IRepository _repository;       
+        private readonly IStorageAccount _storage;
 
-        public StorageAccount(IRepository repository)
+        public StorageAccount(IStorageAccount storage)
         {
-            _repository = repository;
+            _storage = storage;
         }
 
         [HttpPut]        
         public async Task<IActionResult> CreateContainer()
         {
             string containerName = "novocontainer" + Guid.NewGuid().ToString();
-            BlobContainerClient teste = await _repository.Create(containerName); 
+            await _storage.Connect();
+            BlobContainerClient teste = await _storage.Create(containerName); 
             string nameContainer = teste.Name;           
             return Created("containerName",nameContainer);
         }
