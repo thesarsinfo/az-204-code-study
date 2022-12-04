@@ -1,2 +1,0 @@
-#az account set -s ''
-az group create -n rg-dev-az204-stu --location eastus2
