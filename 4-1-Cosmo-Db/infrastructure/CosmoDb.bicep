@@ -2,10 +2,7 @@ targetScope = 'resourceGroup'
 param  location string = resourceGroup().location
 param dbaccname string = 'cosno-dev-az204-stu'
 param dbcontname string = 'cosnocont-dev-az204-stu'
-param dbname string = 'az204db'
-
-
-
+param dbname string = 'cosnosql-dev-az204-stu'
 
 resource cosmosDbAccount 'Microsoft.DocumentDB/databaseAccounts@2021-03-15' = {
   name: dbaccname
@@ -58,9 +55,6 @@ resource sqlDb 'Microsoft.DocumentDB/databaseAccounts/sqlDatabases@2021-06-15' =
     resource: {
       id: dbname
     }
-    options: {
-      throughput:100
-    }
   }
 }
 
@@ -70,10 +64,10 @@ resource sqlContainerName 'Microsoft.DocumentDB/databaseAccounts/sqlDatabases/co
   properties: {
 
     resource: {
-      id: 'Itens'
+      id: dbcontname
       partitionKey: {
         paths: [
-          '/category'
+          '/categoria'
         ]
         kind: 'Hash'
       }
@@ -81,14 +75,25 @@ resource sqlContainerName 'Microsoft.DocumentDB/databaseAccounts/sqlDatabases/co
         indexingMode: 'consistent'
         includedPaths: [
           {
-            path: '/*'            
+            path: 'path'
+            indexes: [
+              {
+                kind: 'Hash'
+                dataType: 'String'
+                precision: 'precision'
+              }
+            ]
           }
         ]
         excludedPaths: [
           {
-            path: 'path'
+            path: '/\'_etag\'/?'
           }
         ]
+      }
+      conflictResolutionPolicy:{
+        mode:'LastWriterWins'
+        conflictResolutionPath: '/_ts'
       }
     }
     options: {}
