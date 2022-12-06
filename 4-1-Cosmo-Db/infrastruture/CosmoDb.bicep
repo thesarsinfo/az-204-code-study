@@ -2,6 +2,7 @@ targetScope = 'resourceGroup'
 param  location string = resourceGroup().location
 param dbaccname string = 'cosno-dev-az204-stu'
 param dbcontname string = 'cosnocont-dev-az204-stu'
+param dbname string = 'az204db'
 
 
 
@@ -50,14 +51,16 @@ resource cosmosDbAccount 'Microsoft.DocumentDB/databaseAccounts@2021-03-15' = {
   }
 }
 resource sqlDb 'Microsoft.DocumentDB/databaseAccounts/sqlDatabases@2021-06-15' = {
-  name: 'name'
+  name: dbname
   parent:cosmosDbAccount
   properties: {
 
     resource: {
-      id: 'ListaAfazeres'
+      id: dbname
     }
-    options: {}
+    options: {
+      throughput:100
+    }
   }
 }
 
@@ -78,14 +81,7 @@ resource sqlContainerName 'Microsoft.DocumentDB/databaseAccounts/sqlDatabases/co
         indexingMode: 'consistent'
         includedPaths: [
           {
-            path: 'path'
-            indexes: [
-              {
-                kind: 'Hash'
-                dataType: 'String'
-                precision: 'precision'
-              }
-            ]
+            path: '/*'            
           }
         ]
         excludedPaths: [
