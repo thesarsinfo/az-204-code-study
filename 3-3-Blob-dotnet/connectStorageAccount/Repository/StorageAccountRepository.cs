@@ -1,12 +1,5 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Azure.Storage.Blobs;
-using Azure.Storage.Blobs.Models;
-using connectStorageAccount.Controllers;
 using connectStorageAccount.data;
-using Microsoft.Extensions.Azure;
 
 namespace connectStorageAccount.Repository
 {

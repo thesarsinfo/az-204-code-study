@@ -1,7 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Azure.Storage.Blobs;
 using connectStorageAccount.Repository;
 using Microsoft.AspNetCore.Mvc;
@@ -25,9 +21,9 @@ namespace connectStorageAccount.Controllers
             string containerName = "novocontainer" + Guid.NewGuid().ToString();
             await _storage.Connect();
             BlobContainerClient teste = await _storage.Create(containerName); 
-            string nameContainer = teste.Name;           
+            string nameContainer = teste.Name;
+            Console.WriteLine(teste.Uri);         
             return Created("containerName",nameContainer);
         }
-
     }
 }

@@ -55,7 +55,6 @@ resource sqlDb 'Microsoft.DocumentDB/databaseAccounts/sqlDatabases@2021-06-15' =
     resource: {
       id: dbname
     }
-    options: {}
   }
 }
 
@@ -76,7 +75,14 @@ resource sqlContainerName 'Microsoft.DocumentDB/databaseAccounts/sqlDatabases/co
         indexingMode: 'consistent'
         includedPaths: [
           {
-            path: '/*'            
+            path: 'path'
+            indexes: [
+              {
+                kind: 'Hash'
+                dataType: 'String'
+                precision: 'precision'
+              }
+            ]
           }
         ]
         excludedPaths: [
