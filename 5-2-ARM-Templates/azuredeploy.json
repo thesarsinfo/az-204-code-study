@@ -1,0 +1,32 @@
+
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "storageAccountName": {
+            "type": "string",
+            "metadata": {
+                "description": "Apenas um teste para storage account via ARM"
+            },
+            "minLength": 4,
+            "maxLength": 24
+        }
+    },
+    "functions": [],
+    "variables": {},
+    "resources": [{
+        "name": "[parameters('storageAccountName')]",
+        "type": "Microsoft.Storage/storageAccounts",
+        "apiVersion": "2021-04-01",
+        "tags": {
+            "displayName": "stoaz204sars"
+        },
+        "location": "[resourceGroup().location]",
+        "kind": "StorageV2",
+        "sku": {
+            "name": "Standard_LRS",
+            "tier": "Standard"
+        }
+    }],
+    "outputs": {}
+}
