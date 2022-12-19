@@ -4,5 +4,6 @@
     "azureFunctions.projectRuntime": "~4",
     "debug.internalConsoleOptions": "neverOpen",
     "azureFunctions.preDeployTask": "publish (functions)",
-    "azureFunctions.projectSubpath": "2-2-Function"
+    "azureFunctions.projectSubpath": "2-2-Function",
+    "java.compile.nullAnalysis.mode": "automatic"
 }
